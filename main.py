@@ -5,13 +5,13 @@ from flask import Flask, render_template,request, redirect
 
 app = Flask(__name__)
 
-# Running content page
+# Esecuzione della pagina dei contenuti
 @app.route('/')
 def index():
     return render_template('index.html')
 
 
-# Dynamic skills
+# Competenze dinamiche
 @app.route('/', methods=['POST'])
 def process_form():
     button_python = request.form.get('button_python')
